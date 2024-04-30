@@ -27,9 +27,9 @@ def visualize(pic, bbox, caption, selected):
     draw_caption(pic, bbox, caption)
     x1, y1, x2, y2 = bbox
     if selected:
-        cv2.rectangle(pic, (x1, y1), (x2, y2), color=(0, 255, 0), thickness=2)
+        cv2.rectangle(pic, (int(x1), int(y1)), (int(x2), int(y2)), color=(0, 255, 0), thickness=2)
     else:
-        cv2.rectangle(pic, (x1, y1), (x2, y2), color=(0, 0, 255), thickness=1)
+        cv2.rectangle(pic, (int(x1), int(y1)), (int(x2), int(y2)), color=(0, 0, 255), thickness=1)
     return pic
 
 
